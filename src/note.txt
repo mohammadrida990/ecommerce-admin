@@ -12,3 +12,15 @@ open cmd and write stripe login
 you can write in cmd: stripe trigger payment_intent.succeeded
   - this will make your payment done
 or when make checkout fill all info its will make payment done
+-------------------
+
+when all deployed
+go to developer in stripe and to webhooks
+dont choose local lostner choose event and check add endpoints or destination
+choose events live checkpoint.session.complete
+create
+take revel or sign in key secret
+
+
+then change in vercel webhooks secret, and stripe secrete in admin
+change NEXT_PUBLIC_API_URl in store
