@@ -1,0 +1,14 @@
+in testting stripe payment:
+login 
+create account with name of project in testing mode not live
+use webhook from  developer tools
+choose cli (windows , download it and add it to oath in envaromatnal variables)
+open cmd and write stripe login 
+   - this should send you an code to your email
+   -this will authorize and gives you an id
+ write in cmd : stripe listen --forward-to localhost:3000/api/webhook
+   -this will give you secret . add it to .env
+
+you can write in cmd: stripe trigger payment_intent.succeeded
+  - this will make your payment done
+or when make checkout fill all info its will make payment done
