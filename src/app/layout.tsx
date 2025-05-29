@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, SignedIn, SignedOut, SignIn } from "@clerk/nextjs";
 import ModalProvider from "@/providers/modal-provider";
 import { ToasterProvider } from "@/providers/toast-provider";
 import { ThemeProvider } from "@/providers/them-provider";
@@ -42,7 +42,13 @@ export default function RootLayout({
 
             <ModalProvider />
 
-            {children}
+            <SignedOut>
+              <div className="flex justify-center items-center my-auto h-full">
+                <SignIn routing="hash" />
+              </div>
+            </SignedOut>
+
+            <SignedIn>{children}</SignedIn>
           </ThemeProvider>
         </body>
       </html>
