@@ -25,8 +25,8 @@ const ProductClient = ({ data }: ProductClientProps) => {
         />
 
         <Button onClick={() => router.push(`/${params.storeId}/products/new`)}>
-          <Plus className="mr-2 h-4 w-4" />
-          Add new
+          <Plus className="h-4 w-4" />
+          <span className="hidden md:block ml-2">Add new</span>
         </Button>
       </div>
 

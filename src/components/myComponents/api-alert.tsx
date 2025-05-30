@@ -44,7 +44,7 @@ const ApiAlert = ({
       </AlertTitle>
 
       <AlertDescription className="mt-4 flex items-center justify-between">
-        <code className="relative rounded bg-muted px-0.5 py-0.5 font-mono text-sm font-semibold">
+        <code className="flex  wrap-anywhere bg-muted px-1 py-1 font-mono text-sm font-semibold rounded">
           {description}
         </code>
 
